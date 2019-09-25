@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modulo02 Exercicio01</title>
+
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+
+
+    <button>Cria Div</button>
+
+
+
+    <script>
+       var btn =  document.querySelector('button');
+       btn.addEventListener('click', function(event){
+           event.preventDefault();
+           criaDiv();
+       })
+
+
+
+
+
+
+
+
+        function criaDiv(){
+            var div = document.createElement('div');
+            div.style.height=100;
+            div.style.width=100;
+            div.style.backgroundColor = getRandomColor();
+            var app  = document.querySelector('#app');
+            app.appendChild(div);
+           
+        }
+    //cria uma nova cor de forma aleatoria
+    function getRandomColor(){
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for(var i = 0; i < 6; i++){
+                color += letters[Math.floor(Math.random()*16)];
+            }
+            return color;
+        }
+    
+    
+    
+    </script>
+    
+</body>
+</html>
