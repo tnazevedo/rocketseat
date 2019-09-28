@@ -94,5 +94,18 @@ module.exports = {
 
 };
 
+após instalação do modulo de webserver  adicionar estas configurações no webconfig
+
+ devServer: {
+     contentBase: __dirname + './public'
+ },
+
+ alterar o script do packaje.json para 
+ "scripts": {
+     "dev": "webpack-dev-server --mode=development"
+ },
+
+ Adiciconando o babel loader na versão mais recente yarn add babel - loader @8 .0 - beta .0 - D
+ 
 
 */

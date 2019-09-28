@@ -195,10 +195,30 @@ console.log(usuario);
 console.log(soma(1, 2));
 */
 // quando define o export default pode também importar da forma como abaixo
-
-import somaFuncction from './funcoes';
-import * as funcoes from './funcoes';
+/**
+import somaFuncction from '../funcoes';
+import * as funcoes from '../funcoes';
 console.log(funcoes);
 console.log(funcoes.soma(1, 2));
 console.log(funcoes.sub(3, 4));
 console.log(funcoes.multi(5, 7));
+
+*/
+
+alert('testando');
+
+// crianddo uma promisse
+
+/**
+ *
+ const minhaPromise = () => new Promise((resolve, reject) => {
+     setTimeout(() => {
+         resolve('Ok');
+     }, 2000);
+ });
+ minhaPromise().then(response => {
+     console.log(response);
+ })
+
+
+ */
