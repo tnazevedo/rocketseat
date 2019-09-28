@@ -2,5 +2,9 @@
     // entende que estamos trabalhando com o navegador com a linguagem e converte em um código que  o navegador entenda
     "presets": ["@babel/preset-env"],
     // criando um novo array de plugins na configuração
-    "plugins": ["@babel/plugin-proposal-object-rest-spread"]
+    "plugins": [
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-transform-async-to-generator"
+
+    ]
 }

@@ -107,5 +107,19 @@ após instalação do modulo de webserver  adicionar estas configurações no we
 
  Adiciconando o babel loader na versão mais recente yarn add babel - loader @8 .0 - beta .0 - D
  
+ para trabalhar com async await instalar o modulo do babel abaixo
 
+ yarn add @babel / plugin - transform - async -to - generator
+
+yarn add @babel/polyfill -D
+
+
+Mudar no webpack.config
+entry: ['@babel/polyfill', './src/main.js'],
+mudar no babelrc
+ "plugins": [
+     "@babel/plugin-proposal-object-rest-spread",
+     "@babel / plugin-transform-sync-to-generator"
+
+ ]
 */
