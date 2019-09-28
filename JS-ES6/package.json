@@ -1,0 +1,21 @@
+{
+  "name": "JS-ES6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "scripts": {
+    "dev": "webpack --mode-development -w"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.0-beta.0"
+  }
+}
