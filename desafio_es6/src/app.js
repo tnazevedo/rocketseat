@@ -1,7 +1,9 @@
 alert('deu certo muleke!!');
 
 import ClasseUsuario from './functions';
-import idade from './functions';
+import {
+    idade
+} from './functions';
 
 
 
