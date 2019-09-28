@@ -205,16 +205,18 @@ console.log(funcoes.multi(5, 7));
 
 */
 
-alert('testando');
+//alert('testando');
 
 // crianddo uma promisse
+/**
+ *
+ const minhaPromise = () => new Promise((resolve, reject) => {
+     setTimeout(() => {
+         resolve('Ok');
+     }, 2000);
+ });
+ */
 
-
-const minhaPromise = () => new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('Ok');
-    }, 2000);
-});
 /*minhaPromise().then(response => {
     console.log(response);
 })
@@ -234,12 +236,42 @@ const minhaPromise = () => new Promise((resolve, reject) => {
 //}
 
 //executaPromise();
+/**
+ * 
+ *
+ const executaPromise = async () => {
+     console.log(await minhaPromise());
+     console.log(await minhaPromise());
+     console.log(await minhaPromise());
 
-const executaPromise = async () => {
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
+
+ };
+ executaPromise();
+ */
 
 
-};
-executaPromise();
+// importando o axios
+//import axios from 'axios';
+
+/***
+ * 
+ * 
+ * class Api {
+     static async getUserInfo(username) {
+         // quando trabalhamos coma sintaxe de async e await é muito comum utilizar try e catch
+         try {
+             const response = await axios.get(`https:api.github.com/users/${username}`);
+             console.log(response);
+
+         } catch (err) {
+             console.warn('Erro na API');
+         }
+
+
+
+     }
+ }
+
+
+ Api.getUserInfo('tnazevedo');
+ */

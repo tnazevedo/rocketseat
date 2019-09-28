@@ -122,4 +122,8 @@ mudar no babelrc
      "@babel / plugin-transform-sync-to-generator"
 
  ]
+
+ adicione o axios para trabalhar com promises
+ yarn add axios
+ 
 */
