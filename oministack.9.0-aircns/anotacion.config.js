@@ -1,5 +1,5 @@
 /*
-dependencias
+dependencias backend
 
 yarn add express
 yarn add nodemon - D
@@ -14,12 +14,15 @@ package.json
 
 },
 
+yarn add cors
+///////////////////////////////////////////////////////////////////
 
 
 adicionando frontend
 
 yarn create react - app frontend
 yarn add axios
+yarn add react-router-dom
 
 
 
