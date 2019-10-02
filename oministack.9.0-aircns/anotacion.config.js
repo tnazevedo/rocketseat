@@ -16,5 +16,12 @@ package.json
 
 
 
+adicionando frontend
+
+yarn create react - app frontend
+yarn add axios
+
+
+
 
 */
