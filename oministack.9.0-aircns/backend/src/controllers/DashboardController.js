@@ -9,6 +9,6 @@ module.exports = {
             user: user_id
         });
         return res.json(spots);
-    };
+    }
 
 }
