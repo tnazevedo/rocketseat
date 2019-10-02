@@ -29,7 +29,7 @@ routes.get('/spots', SpotController.index);
 routes.post('/spots', upload.single('thumbnail'), SpotController.store);
 routes.get('/dashboard', DashboardController.show);
 //essa rotafaz uma coisa legal ela é bem descritiva pega o id
-routes.post('spots/:id/booking', BookingController.store);
+routes.post('/spots/:id/bookings', BookingController.store);
 
 
 module.exports = routes;

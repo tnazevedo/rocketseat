@@ -18,6 +18,8 @@ module.exports = {
             date,
 
         });
+
+        await booking.populate('spot').populate('user');
         return res.json(booking);
     }
 
