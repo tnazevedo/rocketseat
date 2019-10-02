@@ -19,7 +19,7 @@ module.exports = {
 
         });
 
-        await booking.populate('spot').populate('user');
+        await booking.populate('spot').populate('user').execPopulate();
         return res.json(booking);
     }
 
