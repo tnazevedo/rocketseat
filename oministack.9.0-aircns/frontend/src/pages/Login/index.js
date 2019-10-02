@@ -3,11 +3,13 @@ import api from "../../services/api";
 
 export default function Login({history}) {
   
+  //utilizando o stado do rreact
   const [email, setEmail] = useState("");
 
   async function handleSubmit(event) {
     event.preventDefault();
     
+    //var que recebe resposta da requisição assincrona
     const response = await api.post("/sessions", { email });
 
     const { _id } = response.data;

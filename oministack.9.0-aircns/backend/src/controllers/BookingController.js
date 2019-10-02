@@ -1,3 +1,5 @@
+
+// aqui  ficam as controladoras do backend
 const Booking = require('../models/Booking');
 
 

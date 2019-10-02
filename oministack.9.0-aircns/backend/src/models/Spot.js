@@ -1,3 +1,4 @@
+//mongoose auxilia a montar o schema mais facilmente
 const mongoose = require('mongoose');
 const SpotSchema = new mongoose.Schema({
     thumbnail: String,
@@ -12,14 +13,15 @@ const SpotSchema = new mongoose.Schema({
 
 
 },{
-
+//permite o armazenamento virtual
     toJSON:{
         virtuals:true,
     },
 });
+// implementa o armazenamento virtual
 SpotSchema.virtual('thumbnail_url').get(function(){
     return `http://localhost:3333/files/${this.thumbnail}`;
 })
 
-
+// exportaçao de modulo
 module.exports = mongoose.model('Spot', SpotSchema);

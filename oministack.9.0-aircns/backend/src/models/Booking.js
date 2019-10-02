@@ -1,3 +1,5 @@
+// aqui no models ficam todas as regras de negocio ou seja necessidades do negocio
+
 const mongoose = require('mongoose');
 const BookingSchema = new mongoose.Schema({
     date: String,

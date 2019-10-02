@@ -39,6 +39,7 @@ export default function New({history}){
     }
     
     return (
+      //evento onsubmit{recebe function} 
       <form onSubmit={handleSubmit}>
           <label 
                 id="thumbnail" 

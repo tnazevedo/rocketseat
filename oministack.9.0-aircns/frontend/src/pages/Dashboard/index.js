@@ -1,4 +1,6 @@
 import React,{useEffect, useState} from "react";
+
+// importa a lib de link muito bom 
 import {Link} from 'react-router-dom';
 import api from '../../services/api';
 import './styles.css';
@@ -7,7 +9,7 @@ export default function Dashboard() {
   const [spots, setSpots] = useState([]);
 
   useEffect(() => {
-      //code
+      //carrega spots
       async function loadSpots(){
         const user_id = localStorage.getItem('user');
         const response = await api.get('/dashboard', { 
@@ -20,6 +22,7 @@ export default function Dashboard() {
       // o array vazio indica que a pesquisa será feita apenas uma vez 
     },[]);
   return (
+    //<> é necessário no react quando se tem mais de ddois componentes criados de uma vez
     <>
       <ul className="spot-list">
         {spots.map(spot => (
