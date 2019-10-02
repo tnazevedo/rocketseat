@@ -15,6 +15,8 @@ function App() {
     console.log("Funcionou mano!! Tá porra" + email);
     const response = await api.post('/sessions', {email});
     console.log(response);
+    const {_id} = response.data;
+    console.log(_id);
 
 
   }
