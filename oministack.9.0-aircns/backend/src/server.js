@@ -1,13 +1,13 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
+mongoose.connect('mongodb+srv://air-cnc:aircnc1@aircnc-ztiqe.mongodb.net/semana09?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+const routes = require('./routes');
 //porta que a aplicação sera iniciada no servidor
 app.listen(3333);
 
-// iniciando a aplicação
-// req => pega informações da rota tipo quais produtos estavam no carrinho do usuário. recebe informações que o usuário está enviando 
-// res => res devolve uma resposta para a requisição
-app.get('/', (req, res) => {
-    return res.json({
-        message: "Hello world",
-    });
-});
+app.use(express.json());
+app.use(routes);
