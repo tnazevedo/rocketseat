@@ -1,31 +1,47 @@
-import React,{useState} from 'react';
+//import feito usestate do react
+// useEffect => para realizar uma ação assim que o usuário entra nas tela
+import React,{useState, useEffect} from 'react';
 //aqui são tipo tags de html que o react importa
 //View é => div todos os elementos do import abaixo são conhecidos como componentes
 // Text => Texto
 //Stylesheet => folha de estilo 
 //Estilos são feitos na própria pagina 
-import {View, KeyboardAvoidingView, Platform,Text, Image, StyleSheet,TextInput, TouchableOpacity} from 'react-native';
+import {View, AsyncStorage,KeyboardAvoidingView, Platform,Text, Image, StyleSheet,TextInput, TouchableOpacity} from 'react-native';
 
-
+import api from '../services/api';
 
 //importando logotipos
 import Logo from '../assets/logo.png';
 
 
-export default function Login(){
+export default function Login({navigation}){
     const [email, setEmail] = useState("");
     const [techs, setTechs] = useState("");
+    //useEffect(()=>{},) <== essa function recebe dois parametros uma function e um array de dependencias
+    useEffect(()=>{
+        //busca no storage o user  => se existir um User quer dizer que ele já está logado
+        AsyncStorage.getItem('user').then(user =>{
+            //se tiver usuáriio
+            if(user){
+                //=> go to List
+                navigation.navigate('List')
+            }
+        })
+    },)
 
     async function handleSubmit(){
         //emails techs;
-        const response = api.post('/sessions',{
+        const response = await api.post('/sessions',{
             email,
            
-        })
+        });
 
         const {_id}  = response.data;
-
-        console.log(_id);
+        //salva daados de usuário no local storage e dados de tech
+        await AsyncStorage.setItem('user',_id);
+        await AsyncStorage.setItem('techs', techs);
+        //direciona o usuário para a proxima lista
+        navigation.navigate('List');
      
     }
     return (
@@ -41,7 +57,9 @@ export default function Login(){
             keyboardType="email-address"
             autoCapitalize="none"
             autoCorrect={false}
+            //pega o valor do objeto email
             value={email}
+            //ao ter mudança de text
             onChangeText={text => setEmail(text)}
           />
           <Text style={styles.label}>Tecnologias *</Text>
