@@ -17,7 +17,7 @@ Arquivos do curso de ES06, fornecido pela roccketseat
 
 Arquivos do curso introdutório de JS
 
-### Oministack  9.0
+### Omnistack  9.0
 
 Participei da semana omnistack da rocketseat.<br>
 Tentando colocar em prática o máximo de conhecimento possível.<br>
