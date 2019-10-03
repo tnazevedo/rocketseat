@@ -27,4 +27,15 @@ yarn add react-router-dom
 
 
 
+dependencias do  mobile
+
+npm install expo-cli
+yarn add react-navigation
+expo install react-native-gesture-handler react-native-reanimated
+yarn add axios
+
+
+
+
+
 */
