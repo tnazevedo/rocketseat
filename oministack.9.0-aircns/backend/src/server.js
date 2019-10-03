@@ -9,7 +9,7 @@ const app = express();
 
 // utilizando o mongoose para auxiliar na conexão com o mongodb
 
-mongoose.connect('mongodb+srv://air-cnc:aircnc1@aircnc-ztiqe.mongodb.net/semana09?retryWrites=true&w=majority', {
+mongoose.connect('', {
     //utilizar isso aqui para parar de dar errinhos na conexão
     useNewUrlParser: true,
     useUnifiedTopology: true,
