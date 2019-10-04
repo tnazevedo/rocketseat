@@ -3,7 +3,7 @@
 import React, {useState,useEffect }from 'react';
 //FlatList => Componente de listas utilize sempre para trabalhar com listas
 import {View,Text, StyleSheet, FlatList,Image,TouchableOpacity} from 'react-native';
-import{ withNavigation, SafeAreaView } from 'react-navigation';
+import{ withNavigation } from 'react-navigation';
 import api from '../services/api';
 
 //==> Exportando será utilizado na LIST
