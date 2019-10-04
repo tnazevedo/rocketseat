@@ -3,7 +3,7 @@
 import React, {useState,useEffect }from 'react';
 //FlatList => Componente de listas utilize sempre para trabalhar com listas
 import {View,Text, StyleSheet, FlatList,Image,TouchableOpacity} from 'react-native';
-import{ withNavigation } from 'react-navigation';
+import{ withNavigation, SafeAreaView } from 'react-navigation';
 import api from '../services/api';
 
 //==> Exportando será utilizado na LIST
@@ -33,6 +33,7 @@ function SpotList({tech, navigation}){
         <FlatList
           sytle={styles.list}
           data={spots}
+          //pega o spot e retorna cada id unica 
           keyExtractor={spot => spot._id}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -46,7 +47,7 @@ function SpotList({tech, navigation}){
               <Text style={styles.price}>{item.price ? `R$${item.price}/Dia`: 'Gratuito'}</Text>
               <TouchableOpacity 
                 style={styles.button}
-                onPress={() => handleNavigate }                >
+                onPress={() => handleNavigate(item._id)}                >
                   <Text style={styles.buttonText}>
                       Solicitar Reserva
                   </Text>
