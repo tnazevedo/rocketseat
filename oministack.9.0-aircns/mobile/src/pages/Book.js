@@ -1,16 +1,18 @@
 import React, {useState} from "react";
-import { Text,SafeAreaView,StyleSheet,TextInput , Alert,TouchableOpacity, AsyncStorage} from "react-native";
+import { Text,SafeAreaView,StyleSheet,TextInput , Alert,TouchableOpacity, AsyncStorage} from 'react-native';
 import api from '../services/api';
 
-export default function Book({navigation}) {
-  const [date,setDate] = useState('')
 
+
+
+export default function Book({navigation}) {
+
+
+  const [date,setDate] = useState('')
 
   const id  = navigation.getParam('id');
 
-
-
-
+  //==>
   async function handleSubmit(){
     const user_id = await AsyncStorage.getItem('user');
 
@@ -21,7 +23,7 @@ export default function Book({navigation}) {
         user_id 
       }
     });
-    Alert.alert('Solicitção de Reserva enviada.');
+    Alert.alert('Solicitação de Reserva enviada.');
     navigation.navigate('List');
 
 
@@ -46,21 +48,16 @@ export default function Book({navigation}) {
         //pega o valor do objeto email
         value={date}
         //ao ter mudança de text
-        onChangeText={setDate()}
+        onChangeText={setDate}
       />
 
-      <TouchableOpacity 
-          style={styles.button} 
-          onPress={handleSubmit}>
+      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
 
         <Text style={styles.buttonText}> Solicitar Reserva</Text>
       </TouchableOpacity>
 
 
-      <TouchableOpacity 
-          style={[styles.button, styles.cancelButton]} 
-          onPress={handleCancel}>
-
+      <TouchableOpacity  style={[styles.button, styles.cancelButton]} onPress={handleCancel}>
         <Text style={styles.buttonText}> Solicitar Reserva</Text>
       </TouchableOpacity>
    
